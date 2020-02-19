@@ -5,7 +5,7 @@ After a couple weeks getting crazy you got it so... Congrats!
 
 
 ## ...What do I do now?
-Well, if you took around 2 months to iniciate you activities as a cadete and your job role is nothing related to coding, you are probably as lost as I was... asking "What do I do now!?
+Well, if you took around 2 months to iniciate you activities as a cadet and your job role is nothing related to coding, you are probably as lost as I was... asking "What do I do now!?
 Don't be panic! There are many collegues feeling exactly like you now.
 
 And, good news, things will be fine! Will be tough, but will be fine. :)
