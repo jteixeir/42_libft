@@ -11,3 +11,6 @@ Don't be panic! There are many collegues feeling exactly like you now.
 And, good news, things will be fine! Will be tough, but will be fine. :)
 
 ## Refreshing
+* Kerberos
+* Shell Script (basic commands)
+* Git
