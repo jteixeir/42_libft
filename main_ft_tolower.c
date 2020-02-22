@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   main_ft_tolower.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/01 11:54:43 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/02/01 11:56:13 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/02/01 12:24:51 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/02/01 12:40:11 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int p)
+#include <stdio.h>
+#include <ctype.h>
+#include <xlocale.h>
+
+int		ft_tolower(int lo);
+
+int		main(void)
 {
-	if (p >= 32 && p <= 126)
-		return (1);
-	else
-		return (0);
+	int myresult;
+	int fresult;
+
+	myresult = ft_tolower('A');
+	printf("\nmy result is: %i", myresult);
+	fresult = tolower('A');
+	printf("\noriginal result is: %i", fresult);
+	return (0);
 }

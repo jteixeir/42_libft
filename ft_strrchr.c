@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/01 11:54:43 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/02/01 11:56:13 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/02/02 15:37:48 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/02/02 15:41:41 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int p)
+char	*ft_strrchr(const char *str, int c)
 {
-	if (p >= 32 && p <= 126)
-		return (1);
-	else
-		return (0);
+	char *count;
+
+	count = 0;
+	while (*str)
+	{
+		if (*str == c)
+			count = ((char *)str);
+		str++;
+	}
+	if (count)
+		return (count);
+	if (c == '\0')
+		return ((char *)str);
+	return (0);
 }

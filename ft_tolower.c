@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_tolower(int c)
+int		ft_tolower(int lo)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+	if (lo >= 'A' && lo <= 'Z')
+		return (lo + 32);
+	return (lo);
 }

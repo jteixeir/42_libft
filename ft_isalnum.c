@@ -10,13 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_isalnum(int c)
+int		ft_isalnum(int n)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if ((n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z'))
 		return (1);
-	if (c >= '0' && c <= '9')
+	if (n >= '0' && n <= '9')
 		return (1);
 	else
 		return (0);

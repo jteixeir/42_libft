@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   main_ft_strlen.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/01 11:54:43 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/02/01 11:56:13 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/02/01 17:10:28 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/02/01 17:50:40 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int p)
+#include <stdio.h>
+#include <string.h>
+
+#include "libft.h"
+
+int		main(void)
 {
-	if (p >= 32 && p <= 126)
-		return (1);
-	else
-		return (0);
+	char test[] = "Jéssica";
+	int myresult;
+	int fresult;
+	
+	myresult = ft_strlen(test);
+	printf("\nmy result is: %d", myresult);
+	fresult = strlen(test);
+	printf("\noriginal result is: %d", fresult);
+	return (0);
+
 }

@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/01 17:03:14 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/02/01 17:54:29 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/02/21 14:23:52 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/02/21 16:11:03 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-unsigned long	ft_strlen(const char *str)
+char *ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int count;
+	size_t c1;
+	int c2;
+	int l;
 
-	count = 0;
-	while (*str != '\0')
+	c1 = 0;
+	l = ft_strlen(little);
+
+	if (!big)
+		return (NULL);
+	if (l == 0)
+		return ((char *)big);
+	l--;
+	while (big && c1 < len)
 	{
-		str++;
-		count++;
+		c2 = 0;
+		while (big[c1 + c2] == little[c2] && c2 <= l && (c1 + c2) < len)
+		{
+			if (c2 == l)
+				return ((char *)big + c1);
+			c2++;
+		}
+		c1++;
 	}
-	return (count);
+	return (NULL);
 }

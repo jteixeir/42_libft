@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_toupper(int c)
+int		ft_toupper(int up)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	if (up >= 97 && up <= 122)
+		return (up - 32);
+	return (up);
 }

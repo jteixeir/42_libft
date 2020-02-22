@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   main_ft_isascii.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/01 11:54:43 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/02/01 11:56:13 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/02/01 11:46:51 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/02/01 11:51:44 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int p)
+#include <stdio.h>
+#include <ctype.h>
+
+int		ft_isascii(int a);
+
+int		main(void)
 {
-	if (p >= 32 && p <= 126)
-		return (1);
-	else
-		return (0);
+	int myresult;
+	int fresult;
+
+	myresult = ft_isascii(' ');
+	printf("\nmy result is: %i", myresult);
+	fresult = isascii(' ');
+	printf("\noriginal function is: %i", fresult);
+	return (0);
 }

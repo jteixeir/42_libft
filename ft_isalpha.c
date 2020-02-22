@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_isalpha(int c)
+int		ft_isalpha(int l)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if ((l >= 'a' && l <= 'z') || (l >= 'A' && l <= 'Z'))
 		return (1);
 	else
 		return (0);

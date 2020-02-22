@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   main_ft_isprint.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/01 11:54:43 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/02/01 11:56:13 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/02/01 11:56:29 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/02/01 12:10:31 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int p)
+#include <stdio.h>
+#include <ctype.h>
+
+int		ft_isprint(int p);
+
+int		main(void)
 {
-	if (p >= 32 && p <= 126)
-		return (1);
-	else
-		return (0);
+	int myresult;
+	int fresult;
+
+	myresult = ft_isprint('l');
+	printf("\nmy result is: %i", myresult);
+	fresult = isprint('l');
+	printf("\noriginal function is: %i", fresult);
+	return (0);
 }
