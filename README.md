@@ -12,9 +12,53 @@ And, good news, things will be fine! Will be tough, but will be fine. :)
 
 ## Refreshing
 * Kerberos
-* Shell Script (basic commands)
+
+* Shell | Vim
+
+Command table
+| Action        | Command   | Usage |
+|---------------|-----------|-------|
+|  Last folder  |    cd -   | shell |
+| Where u are   |    pwd    | shell |
+| Unzip a file  | tar -xf   | shell |
+| Zip a file    | touch cf -| shell |
+| Detail check  | ls -la    | shell |
+
+
+Shortcut table
+| Action        | Shortcut | Usage |
+|---------------|----------|-------|
+|Line selection¹| Shift + v| vim   |
+|     Copy¹     |     y    | vim   |
+|     Cut¹      |     x    | vim   |
+|    Paste¹     |     p    | vim   |
+|   Line end¹   |     a    | vim   |
+|     Undo¹     |     u    | vim   |
+|     Redo¹     | Ctrl + r | vim   |
+
+¹you must be in a view mode
+
+
 * Git
+
+`git clone`
+
+`git add`
+
+`git commit -m <comment>`
+
+`git push`
+
+`git status`
+
+`git log`
+
+Find more in [Top 20 Git Commands](https://dzone.com/articles/top-20-git-commands-with-examples)
+
 * Makefile
+
+* Malloc / Calloc
+
 
 ## Libft - Good to know
 * Prototype
