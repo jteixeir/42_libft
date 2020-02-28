@@ -41,17 +41,17 @@ Shortcut table
 
 * Git
 
-``git clone
+`git clone`
 
-git add
+`git add`
 
-git commit -m <comment>
+`git commit -m <comment>`
+ 
+`git push`
 
-git push
+`git status`
 
-git status
-
-git log``
+`git log`
 
 Find more in [Top 20 Git Commands](https://dzone.com/articles/top-20-git-commands-with-examples)
 
