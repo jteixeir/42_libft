@@ -36,5 +36,11 @@ void		*ft_memmove(void *dest, const void *src, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
+int		ft_atoi(const char *nptr);
+size_t		ft_strlcpy(char *dest, const char *src, size_t size);
+size_t		ft_strlcat(char *dst, const char *src, size_t size);
+char		*ft_substr(const char *s, unsigned int start, size_t len);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		**ft_split(char const *s, char c);
 
 #endif
