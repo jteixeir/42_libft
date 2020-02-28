@@ -42,10 +42,15 @@ Shortcut table
 * Git
 
 ``git clone
+
 git add
+
 git commit -m <comment>
-git push`
+
+git push
+
 git status
+
 git log``
 
 Find more in [Top 20 Git Commands](https://dzone.com/articles/top-20-git-commands-with-examples)
