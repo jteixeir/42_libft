@@ -1,15 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/29 12:15:46 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/02/29 12:40:40 by jteixeir         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void *ptr2;
-	size_t c;
-	char *ptr1;
+	void	*ptr2;
+	size_t	c;
+	char	*ptr1;
 
 	c = 0;
 	ptr2 = malloc(nmemb * size);
 	ptr1 = ptr2;
-
 	if (ptr1 == NULL)
 		return (NULL);
 	while (c < (nmemb * size))
@@ -20,4 +31,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	return (ptr2);
 }
-

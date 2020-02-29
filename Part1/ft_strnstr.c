@@ -6,20 +6,20 @@
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/21 14:23:52 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/02/21 16:11:03 by jteixeir         ###   ########.fr       */
+/*   Updated: 2020/02/29 12:51:34 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t c1;
-	int c2;
-	int l;
+	size_t	c1;
+	int		c2;
+	int		l;
 
 	c1 = 0;
 	l = ft_strlen(little);
-
 	if (!big)
 		return (NULL);
 	if (l == 0)
