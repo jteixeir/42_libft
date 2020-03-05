@@ -6,7 +6,7 @@
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 15:12:37 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/02/21 15:37:31 by jteixeir         ###   ########.fr       */
+/*   Updated: 2020/03/04 22:42:58 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		**ft_split(char const *s, char c);
+char		*ft_strtrim(char const *s1, char const *set);
+char		*ft_itoa(int n);
 
 #endif
