@@ -1,59 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/04 21:43:27 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/03/06 14:41:19 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/03/06 13:57:35 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/03/06 14:25:11 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	intlen(long nbr)
-{
-	int	i;
-
-	i = 0;
-	if (nbr == 0)
-		return (1);
-	if (nbr < 0)
-	{
-		i++;
-		nbr *= -1;
-	}
-	while (nbr != 0)
-	{
-		nbr /= 10;
-		i++;
-	}
-	return (i);
-}
-
-char		*ft_itoa(int n)
+void	ft_putnbr_fd(int n, int fd)
 {
 	long	nbr;
-	char	*str;
-	int		len;
 
 	nbr = n;
-	len = intlen(nbr);
-	if (!(str = ft_calloc(len + 1, sizeof(char))))
-		return (NULL);
 	if (nbr < 0)
 	{
-		str[0] = '-';
 		nbr *= -1;
+		write(fd, "-", 1);
 	}
-	len--;
-	while (nbr >= 10)
+	if (nbr >= 10)
 	{
-		str[len] = (nbr % 10) + 48;
-		nbr = nbr / 10;
-		len--;
+		ft_putnbr_fd(nbr / 10, fd);
+		ft_putnbr_fd(nbr % 10, fd);
 	}
-	str[len] = nbr + 48;
-	return (str);
+	else
+		ft_putchar_fd(nbr + 48, fd);
 }

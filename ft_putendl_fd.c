@@ -1,38 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/21 14:23:52 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/03/06 15:52:22 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/03/06 13:54:27 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/03/06 13:56:08 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	c1;
-	int		c2;
-	int		l;
-
-	c1 = 0;
-	l = ft_strlen(little);
-	if (l == 0)
-		return ((char *)big);
-	l--;
-	while (big[c1] && c1 < len)
-	{
-		c2 = 0;
-		while (big[c1 + c2] == little[c2] && c2 <= l && (c1 + c2) < len)
-		{
-			if (c2 == l)
-				return ((char *)big + c1);
-			c2++;
-		}
-		c1++;
-	}
-	return (NULL);
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 12:17:55 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/02/29 12:46:20 by jteixeir         ###   ########.fr       */
+/*   Updated: 2020/03/06 15:45:13 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	c = 0;
 	dest2 = dest;
 	src2 = src;
+	if (!dest && !src)
+		return (NULL);
 	if (dest2 > src2)
 	{
 		c = n;
