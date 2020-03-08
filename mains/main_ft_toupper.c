@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   main_ft_toupper.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 13:01:23 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/03/07 18:17:24 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/02/01 12:10:51 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/02/01 12:20:46 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
+#include <xlocale.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int		ft_toupper(int up);
+
+int		main(void)
 {
-	char	*str;
-	int		len;
-	int		i;
+	int myresult;
+	int fresult;
 
-	if (s == NULL)
-		return (NULL);
-	len = ft_strlen(s);
-	if (!(str = (char *)ft_calloc(len + 1, sizeof(char))))
-		return (NULL);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		str[i] = f(i, s[i]);
-		i++;
-	}
-	return (str);
+	myresult = ft_toupper('x');
+	printf("\n my result is: %i", myresult);
+	fresult = toupper('x');
+	printf("\n original function is: %i", fresult);
+	return (0);
 }

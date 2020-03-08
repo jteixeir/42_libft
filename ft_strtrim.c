@@ -6,7 +6,7 @@
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 20:41:08 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/03/06 19:06:20 by jteixeir         ###   ########.fr       */
+/*   Updated: 2020/03/07 14:14:24 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ char		*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*new;
 
-	beg = 0;
-	if (s1 == NULL)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
-	while (finder(s1[beg], set) == 1)
+	beg = 0;
+	while (s1[beg] && finder(s1[beg], set) == 1)
 		beg++;
 	if (s1[beg] == '\0')
 		return (new = ft_calloc(1, sizeof(char)));

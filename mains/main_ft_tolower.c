@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   main_ft_tolower.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 13:01:23 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/03/07 18:17:24 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/02/01 12:24:51 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/02/01 12:40:11 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
+#include <xlocale.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int		ft_tolower(int lo);
+
+int		main(void)
 {
-	char	*str;
-	int		len;
-	int		i;
+	int myresult;
+	int fresult;
 
-	if (s == NULL)
-		return (NULL);
-	len = ft_strlen(s);
-	if (!(str = (char *)ft_calloc(len + 1, sizeof(char))))
-		return (NULL);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		str[i] = f(i, s[i]);
-		i++;
-	}
-	return (str);
+	myresult = ft_tolower('A');
+	printf("\nmy result is: %i", myresult);
+	fresult = tolower('A');
+	printf("\noriginal result is: %i", fresult);
+	return (0);
 }

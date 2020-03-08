@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   main_ft_strrchr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/29 12:20:21 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/03/07 11:07:30 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/02/02 15:30:16 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/02/02 15:35:17 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int main () 
 {
-	size_t	i;
-	char	*res;
+   int len;
+   const char str[] = "http://www.tutorialspoint.com";
+   const char ch = '.';
+   char *ret;
 
-	if (!s || len == 0 || ft_strlen(s) == 0 || start >= ft_strlen(s) - 1)
-		return (ft_calloc(sizeof(char), 1));
-	i = 0;
-	while (s[i + start] && i < len)
-		i++;
-	res = ft_calloc(sizeof(char), i + 1);
-	if (!res)
-		return (NULL);
-	i = 0;
-	while (s[i + start] && i < len)
-	{
-		res[i] = s[i + start];
-		i++;
-	}
-	return (res);
+   char *myresult;
+
+   int c;
+
+   ret = strrchr(str, ch);
+   printf("função original\n%c\n%s", ch, ret);
+
+   myresult = ft_strrchr(str, ch);
+   printf("\nminha função\n%c\n%s", ch, ret);
+   return(0);
 }

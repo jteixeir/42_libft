@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   main_ft_isalnum.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteixeir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 13:01:23 by jteixeir          #+#    #+#             */
-/*   Updated: 2020/03/07 18:17:24 by jteixeir         ###   ########.fr       */
+/*   Created: 2020/02/01 10:52:58 by jteixeir          #+#    #+#             */
+/*   Updated: 2020/02/01 11:10:15 by jteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int		ft_isalnum(int n);
+
+int		main(void)
 {
-	char	*str;
-	int		len;
-	int		i;
+	int myresult;
+	int fresult;
 
-	if (s == NULL)
-		return (NULL);
-	len = ft_strlen(s);
-	if (!(str = (char *)ft_calloc(len + 1, sizeof(char))))
-		return (NULL);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		str[i] = f(i, s[i]);
-		i++;
-	}
-	return (str);
+	myresult = ft_isalnum('0');
+	printf("\nmy result is: %i\n", myresult);
+	fresult = isalnum('0');
+	printf("original function is: %i\n", fresult);
+	return (0);
 }
