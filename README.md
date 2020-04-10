@@ -1,5 +1,4 @@
 # Welcome Cadet \o/
-
 After a couple weeks getting crazy you got it so... Congrats!
 ![source](https://user-images.githubusercontent.com/61021800/74871349-14c6c180-533a-11ea-90c9-1b0e2d6fa505.gif)
 
@@ -56,8 +55,4 @@ Find more in [Top 20 Git Commands](https://dzone.com/articles/top-20-git-command
 * Makefile
 
 * Malloc / Calloc
-
 Good [Tutorial](https://www.embarcados.com.br/introducao-ao-makefile/)
-
-## Libft - Good to know
-* Prototype
